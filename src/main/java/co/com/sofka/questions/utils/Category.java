@@ -5,5 +5,6 @@ public enum Category {
     SCIENCES,
     SOFTWARE_DEVELOPMENT,
     SOCIAL_SCIENCES,
-    LANGUAGE
+    LANGUAGE,
+    COMPUTER
 }
