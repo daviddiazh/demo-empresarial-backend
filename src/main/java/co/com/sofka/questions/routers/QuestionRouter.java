@@ -68,7 +68,7 @@ public class QuestionRouter {
         );
     }
 
-    @Bean
+    /*@Bean
     public RouterFunction<ServerResponse> addAnswer(AddAnswerUseCase addAnswerUseCase) {
         return route(POST("/add").and(accept(MediaType.APPLICATION_JSON)),
                 request -> request.bodyToMono(AnswerDTO.class)
@@ -78,7 +78,7 @@ public class QuestionRouter {
                                         .bodyValue(result))
                         )
         );
-    }
+    }*/
 
     @Bean
     public RouterFunction<ServerResponse> delete(DeleteUseCase deleteUseCase) {

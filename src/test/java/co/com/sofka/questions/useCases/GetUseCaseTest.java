@@ -23,7 +23,7 @@ class GetUseCaseTest {
     @Test
     public void getUseCaseTest(){
 
-        var questionDTO = new QuestionDTO("1asd2153453","123","What id DDD in software?", Type.OPEN, Category.SOFTWARE_DEVELOPMENT);
+        var questionDTO = new QuestionDTO("1asd2153453","123","What id DDD in software?", Type.OPEN, Category.SOFTWARE_DEVELOPMENT, "Se envio el Email");
         var question= new Question();
         question.setId("1asd2153453");
         question.setQuestion("What id DDD in software?");

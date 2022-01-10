@@ -27,4 +27,5 @@ public class DeleteUseCase implements Function<String, Mono<Void>> {
         return questionRepository.deleteById(id)
                 .switchIfEmpty(Mono.defer(() -> answerRepository.deleteByQuestionId(id)));
     }
+
 }

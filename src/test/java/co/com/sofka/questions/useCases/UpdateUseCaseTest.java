@@ -27,9 +27,9 @@ class UpdateUseCaseTest {
     @Test
     void updateUseCaseTest(){
 
-        var questionDT0 = new QuestionDTO("1", "1234", "What id DDD in software?", Type.OPEN, Category.SOFTWARE_DEVELOPMENT);
+        var questionDT0 = new QuestionDTO("1", "1234", "What id DDD in software?", Type.OPEN, Category.SOFTWARE_DEVELOPMENT, "Se envio el Email");
 
-        var question = new Question("1", "1234", "What id DDD in software?", Type.OPEN, Category.SOFTWARE_DEVELOPMENT);
+        var question = new Question("1", "1234", "What id DDD in software?", Type.OPEN, Category.SOFTWARE_DEVELOPMENT, "Se envio el Email");
 
         when(repository.save(Mockito.any(Question.class))).thenReturn(Mono.just(question));
 

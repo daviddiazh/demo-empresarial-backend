@@ -31,7 +31,7 @@ class OwnerListUseCaseTest {
 
     @Test
     void ownerListUseCaseTest() {
-        var question = new Question("1", "1234", "What id DDD in software", Type.OPEN, Category.SOFTWARE_DEVELOPMENT);
+        var question = new Question("1", "1234", "What id DDD in software", Type.OPEN, Category.SOFTWARE_DEVELOPMENT, "Se envio el Email");
         when(repository.findByUserId(question.getUserId())).thenReturn(Flux.just(question));
 
         StepVerifier.create(ownerListUseCase.apply(question.getUserId()))

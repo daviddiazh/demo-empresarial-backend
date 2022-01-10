@@ -34,7 +34,7 @@ class FindAllByCategoryUseCaseTest {
 
     @Test
     void findAllByCategoryUseCaseTest() {
-        var question = new Question("1", "1234", "What id DDD in software?", Type.OPEN, Category.SOFTWARE_DEVELOPMENT);
+        var question = new Question("1", "1234", "What id DDD in software?", Type.OPEN, Category.SOFTWARE_DEVELOPMENT, "Se envio el Email");
         when(repository.findAllByCategory("SOFTWARE_DEVELOPMENT")).thenReturn(Flux.just(question));
 
         StepVerifier.create(findAllByCategory.apply("SOFTWARE_DEVELOPMENT"))
