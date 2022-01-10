@@ -25,7 +25,7 @@ class DeleteUseCaseTest {
     @Test
     void deleteUseCaseTest(){
 
-        var answerDTO = new AnswerDTO("1asd2153453", "123", "What id DDD in software");
+        var answerDTO = new AnswerDTO("12345678","1asd2153453", "123", "What id DDD in software");
 
         var answer = new Answer("1asd2153453", "123", "1", "What id DDD in software", 1);
 
