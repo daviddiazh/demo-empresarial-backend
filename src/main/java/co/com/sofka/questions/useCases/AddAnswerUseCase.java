@@ -38,11 +38,11 @@ public class AddAnswerUseCase implements SaveAnswer {
 
                             mailUseCase.sendMail(
                                     question.getEmail(),
-                                    "Han respondido a tu pregunta: " + question.getQuestion(),
-                                    "<table style=\"width:100%;border-collapse:collapse;border:0;border-spacing:0;\">" +
-                                            "<tr>" +
-                                            "<td style=\"background:#060B26; color:white;\"><h2>Respuesta: " + answer.getAnswer() + "</h2></td>" +
-                                            "</tr>" +
+                                    "Han respondido a tu pregunta: " + question.getQuestion() + " en App Preguntas",
+                                    "<table style=\"width:100%;margin: 10px 50px;\">" +
+                                                "<tr>" +
+                                                "<td style=\"background:#0d6efd; color:#ffffff;\"><h2>Respuesta: " + answer.getAnswer() + "</h2></td>" +
+                                                "</tr>" +
                                             "</table>"
                             );
                             return question;
