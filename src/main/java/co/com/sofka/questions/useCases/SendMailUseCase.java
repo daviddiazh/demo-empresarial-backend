@@ -38,7 +38,6 @@ public class SendMailUseCase {
             helper.setTo(to);
             helper.setText(body, true);
             mailSender.send(message);
-            System.out.println(to);
         } catch (MessagingException ex){
             ex.getMessage();
         }
