@@ -1,7 +1,6 @@
 package co.com.sofka.questions.model;
 
 
-import co.com.sofka.questions.collections.Rate;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.*;
@@ -16,7 +15,6 @@ public class AnswerDTO {
     @Size(min = 2, max = 250, message = "Error de tamaño de caracteres")
     private String answer;
     private Integer position;
-    private List<RateDTO> rates;
 
     public AnswerDTO() {
 
@@ -29,10 +27,7 @@ public class AnswerDTO {
         this.answer = answer;
     }
 
-    public List<RateDTO> getRates() {
-        this.rates = Optional.ofNullable(rates).orElse(new ArrayList<>());
-        return rates;
-    }
+
 
     public String getId() {
         return id;
@@ -74,21 +69,18 @@ public class AnswerDTO {
         this.position = position;
     }
 
-    public void setRates(List<RateDTO> rates) {
-        this.rates = rates;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AnswerDTO answerDTO = (AnswerDTO) o;
-        return Objects.equals(userId, answerDTO.userId) && Objects.equals(questionId, answerDTO.questionId) && Objects.equals(answer, answerDTO.answer) && Objects.equals(position, answerDTO.position) && Objects.equals(rates, answerDTO.rates);
+        return Objects.equals(userId, answerDTO.userId) && Objects.equals(questionId, answerDTO.questionId) && Objects.equals(answer, answerDTO.answer) && Objects.equals(position, answerDTO.position);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, questionId, answer, position, rates);
+        return Objects.hash(userId, questionId, answer, position);
     }
 
     @Override
@@ -98,7 +90,6 @@ public class AnswerDTO {
                 ", questionId='" + questionId + '\'' +
                 ", answer='" + answer + '\'' +
                 ", position=" + position +
-                ", rates=" + rates +
                 '}';
     }
 }
