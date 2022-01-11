@@ -34,13 +34,13 @@ Directrices:
 2. El template del email puede ser cualquiera
 
 
-##Tener el campo de respuesta y de pregunta enriquecido
+## Tener el campo de respuesta y de pregunta enriquecido
 Directrices:
 1. Cambiar los textareas a un componente enriquecido
 2. Poder guardar HTML
 3. Poder mostrar formato de código
 
 
-##Agregar un icono/logo a la aplicación
+## Agregar un icono/logo a la aplicación
 Directrices:
 1. Seleccionar un icono/logo y ponerlo siempre visible
